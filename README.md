@@ -19,6 +19,12 @@ For each record in the tinydata dataset, the following is provided:
 - Subject ID: identifier of the subject who carried out the experimen
 - Mean Measurements: Means of the 65 std() and mean() measurements from the original datset
 
+NOTE: When reading the tidydata.txt file into R, recommend using the command:
+
+    read.table("./tinydata.txt", sep=",", header = TRUE, check.names = FALSE)
+    
+The check.names = FALSE is important to make sure the feature names are imported as indicated in the codebook.
+
 ## Files included with this dataset:
 
 The dataset includes the following files related specifically to this tinydata dataset:
@@ -29,7 +35,7 @@ The dataset includes the following files related specifically to this tinydata d
 
 - 'tinydata.txt': Subsetted dataset showing the aggregated means of the std() and mean() measurements by activity and subject
 
-- 'run_analysis.R': R function to create the tinydata.txt file
+- 'run_analysis.R': R function to create the tinydata.txt file and return the tidy dataset
 
 This data set also includes the following files related to the original dataset that are used by the run_analysis.R function or provide additional reference information about the original datasets. These files are in the /data folder.
 
